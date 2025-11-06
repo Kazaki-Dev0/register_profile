@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Raleway:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <header class="registration-header">
+        <div class="logo">
+            <img src="./images/Logo.png" alt="Company Logo" class="logo-img">
+            <span class="company-name">COMPANY NAME</span>
+        </div>
+
+        <img src="./images/Progress bar.png" alt="Etapa 1 de 3" class="progress-bar-img">
+
+        <button class="close-btn" aria-label="Fechar">&times;</button>
+    </header>
+    
+    <main class="registration-body">
+        
+        <h1>Registration</h1>
+        <p class="description">Fill in the registration data. It will take a couple of minutes. All you need is a phone number and e-mail.</p>
+        
+        <div class="privacy-notice">
+            <span class="privacy-icon">🔒</span>
+            <p class="privacy-text">We take privacy issues seriously. You can be sure that your personal data is securely protected.</p>
+            <button class="close-notice" aria-label="Fechar aviso">&times;</button>
+        </div>
+        
+        <form class="phone-form">
+            <label for="phone">Enter your phone number</label>
+            <div class="phone-input-group">
+                <div class="country-code">
+                    <span>+1</span>
+                    <span class="dropdown-arrow">▾</span>
+                </div>
+                <input type="tel" id="phone" placeholder="555-555-1234">
+            </div>
+            
+            <button type="submit" class="send-code-btn"><a href="register2.html">Send Code</a></button>
+        </form>
+    </main>
+
+</body>
+</html>

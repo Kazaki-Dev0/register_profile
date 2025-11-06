@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho (Fiel ao Figma) --- */
+.registration-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 40px; 
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 28px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.company-name {
+    /* ITEM 3 (Logo) - Especificações mantidas */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #242731;
+}
+
+.close-btn {
+    font-size: 24px;
+    color: #999;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Corpo Principal (Conteúdo Centralizado) --- */
+.registration-body {
+    width: 100%;
+    max-width: 480px; 
+    margin: 40px auto 0; 
+    padding: 20px;
+}
+
+/* --- Etapas de Progresso (Pontos do Figma) --- */
+.progress-steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.step {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+    margin: 0 5px;
+}
+.step.active {
+    background-color: #4A90E2; /* Cor azul (Pendente) */
+}
+
+/* --- Conteúdo de Texto (Especificações mantidas) --- */
+h1 {
+    /* ITEM 1 (Título) */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    color: #242731;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.description {
+    /* ITEM 2 (Descrição) */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #575F6E;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* ################################### */
+/* ### NOVOS ESTILOS - ETAPA 3 ### */
+/* ################################### */
+
+/* --- Bloco do Telefone (Confirmado) --- */
+.phone-display {
+    /* Sem borda, conforme o Figma */
+    padding: 8px 0;
+    margin-bottom: 16px;
+}
+
+.phone-number {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #242731;
+    display: block; /* Fica em cima */
+    line-height: 1.4;
+    /* (Pendente) */
+}
+
+.phone-status-confirmed {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #27AE60; /* Cor padrão (verde) */
+    line-height: 1.4;
+    /* (Pendente) */
+}
+
+
+/* --- Formulário de Registro Final --- */
+.registration-form label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: #444; /* (Pendente) */
+    margin-bottom: 8px;
+    margin-top: 16px; /* Espaço entre os campos */
+    text-align: left;
+}
+
+/* Estilo padrão para inputs de texto/email/senha */
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: 100%;
+    height: 44px; /* (Pendente) */
+    border: 1px solid #ccc; /* (Pendente) */
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.registration-form input:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Container para o input de senha + ícone */
+.password-input-group {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-group input[type="password"] {
+    /* Adiciona espaço à direita para o ícone não sobrepor o texto */
+    padding-right: 40px; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #999; /* (Pendente) */
+}
+
+.help-text {
+    font-size: 13px;
+    color: #575F6E;
+    margin-top: 8px;
+}
+
+/* --- Botão Azul "Register Now" --- */
+.register-btn {
+    margin-top: 24px;
+    width: 100%; /* Botão em largura total */
+    height: 48px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    
+    /* Cores do Figma */
+    background-color: #4A90E2; /* Azul (Pendente) */
+    color: #fff;
+    
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.register-btn:hover {
+    background-color: #3a7bc8; /* Azul um pouco mais escuro */
+}
+
+
+/* ################################### */
+/* ### Media Query para Mobile ### */
+/* ################################### */
+@media (max-width: 600px) {
+    .registration-header {
+        padding: 16px 20px;
+    }
+
+    .phone-number{
+        padding: 20px;
+        background-color: #EFF7FF;
+    }
+    .registration-body {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    /* Alinhamento à esquerda no mobile */
+    h1,
+    .description,
+    .phone-display,
+    .help-text {
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .description {
+        font-size: 15px;
+    }
+}

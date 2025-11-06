@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Step 2</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Raleway:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <header class="registration-header">
+        <div class="logo">
+            <img src="./images/Logo.png" alt="Company Logo" class="logo-img">
+            <span class="company-name">COMPANY NAME</span>
+        </div>
+        <img src="./images/Progress bar2.png" alt="progres bar2">
+        <button class="close-btn" aria-label="Fechar">&times;</button>
+    </header>
+    
+    <main class="registration-body">
+        <h1>Registration</h1>
+        <p class="description">Fill in the registration data. It will take a couple of minutes. All you need is a phone number and e-mail.</p>
+        
+        <div class="phone-display">
+            <div class="phone-info">
+                <span class="phone-number">+1 555 555-1234</span>
+                <span class="phone-status">Number not confirmed yet</span>
+            </div>
+            <button class="edit-btn" aria-label="Editar número">✎</button>
+        </div>
+
+        <form class="confirmation-form">
+            <label for="code-1">Confirmation code</label>
+            
+            <div class="code-inputs">
+                <input type="tel" id="code-1" maxlength="1" pattern="[0-9]" required>
+                <input type="tel" maxlength="1" pattern="[0-9]" required>
+                <input type="tel" maxlength="1" pattern="[0-9]" required>
+                <input type="tel" maxlength="1" pattern="[0-9]" required>
+                <input type="tel" maxlength="1" pattern="[0-9]" required>
+                <input type="tel" maxlength="1" pattern="[0-9]" required>
+            </div>
+            
+            <div class="form-actions">
+                <a href="#" class="send-again"><span>↻</span> Send again</a>
+            </div>
+            
+            <p class="help-text">Confirm phone number with code from sms message</p>
+            
+            <button type="submit" class="confirm-btn"><a href="./register3.html">Confirm</a></button>
+        </form>
+    </main>
+
+</body>
+</html>
