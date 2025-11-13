@@ -1,0 +1,270 @@
+:root {
+    /* Cores (baseadas no protótipo) */
+    --color-primary: #6C63FF; /* Roxo/Azul principal (chutei) */
+    --color-primary-blue: #007BFF; /* Azul do botão Save */
+    --color-bg: #f0f7ff;         /* Fundo da página (azul bem claro) */
+    --color-card-bg: #ffffff;    /* Fundo do card (branco) */
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #7a7a7a;
+    --color-text-label: #555555;
+    --color-border: #dcdcdc;
+    --color-border-light: #eeeeee;
+    --color-stepper: #e0e0e0;
+}
+
+/* Reset básico e Font Family */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    
+    /* Centraliza o card na tela */
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 16px; /* Espaçamento para o card não colar nas bordas no mobile */
+}
+
+/* ========================================================================
+   2. ESTILOS MOBILE-FIRST (ESTADO PADRÃO)
+   ======================================================================== */
+.progress-bar{
+  padding-left: 88%;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 420px; /* Largura máxima para mobile */
+    background-color: var(--color-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    overflow: hidden;
+}
+
+/* --- Cabeçalho --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.logo-icon {
+    /* Placeholder para seu ícone 'C' */
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+}
+
+.close-btn {
+    /* Placeholder para seu ícone 'X' */
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+}
+
+/* --- Etapas de Progresso --- */
+.progress-stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.step {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-stepper);
+    transition: background-color 0.3s ease;
+}
+
+.step.active {
+    background-color: var(--color-primary);
+}
+
+/* --- Corpo e Formulário --- */
+.card-body h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.card-body .subtitle {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto 32px auto;
+}
+
+/* --- Seção do Formulário --- */
+.form-section {
+    border: none;
+    border-top: 1px solid var(--color-border-light);
+    padding-top: 24px;
+}
+
+.form-section legend h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.form-section legend p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+}
+
+/* No mobile, .form-grid não é um grid.
+   Os .form-group são empilhados por padrão (são block-level).
+*/
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-label);
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Wrapper para o Select (para a seta customizada) */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    /* Placeholder para o ícone de seta */
+    content: '▼';
+    font-size: 12px;
+    color: var(--color-text-label);
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* --- Botão Salvar --- */
+.save-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+    width: 100%; /* Botão ocupa 100% no mobile */
+    padding: 14px;
+    margin-top: 16px;
+    
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--color-primary-blue);
+    
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #0056b3;
+}
+
+.icon-check {
+    /* Placeholder para o ícone de check */
+    font-size: 14px;
+}
+
+/* ========================================================================
+   3. ESTILOS DESKTOP (Aplicados APENAS acima de 768px)
+   ======================================================================== */
+@media (min-width: 768px) {
+    
+    /* O card fica mais largo */
+    .profile-card {
+        max-width: 720px;
+        padding: 32px;
+    }
+
+    /* Títulos e legendas ficam alinhados à esquerda */
+    .card-body h1,
+    .card-body .subtitle {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .card-body .subtitle {
+        max-width: 100%;
+    }
+
+    /* AQUI A MÁGICA ACONTECE:
+       O .form-grid AGORA se torna um grid de 2 colunas.
+    */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+        gap: 20px;
+    }
+
+    /* A classe .span-2 força o item a ocupar 
+       as duas colunas do grid.
+    */
+    .form-group.span-2 {
+        grid-column: 1 / -1; /* Ocupa da linha 1 até a última */
+    }
+
+    /* Os .form-group que NÃO têm .span-2
+       (Country e Zip code) irão naturalmente se 
+       posicionar lado a lado, cada um em uma coluna.
+    */
+
+    /* O botão de salvar não ocupa mais 100% */
+    .save-btn {
+        width: auto; /* Tamanho automático */
+        padding: 14px 32px;
+    }
+}

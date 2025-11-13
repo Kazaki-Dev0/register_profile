@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Info</title>
+  <link rel="stylesheet" href="stylep1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="cima">
+    <div class="logo">
+      <img src="./images/Logo.png" alt="Logo da empresa">
+      <span>COMPANY NAME</span>
+    </div>
+    <img src="./images/Icon.png" alt="Ícone de fechar">
+  </header>
+
+  <main>
+    <img src="./images/Progress bar.png" alt="Barra de progresso" class="progress-bar">
+
+    <h2>Profile info</h2>
+    <p class="description">
+      Fill in the data for profile. It will take a couple of minutes. <br>
+      You only need a passport
+    </p>
+
+    <div class="checkbox-area">
+      <input type="checkbox" id="terms" checked>
+      <label for="terms">I agree with <a href="#">Terms of use</a></label>
+    </div>
+
+    <section class="form-container">
+      <div class="section">
+        <h3>Personal data</h3>
+        <p class="palavras">Specify exactly as in your passport</p>
+
+        <div class="input-group">
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" value="Alexander">
+        </div>
+
+        <div class="input-group">
+          <label for="second-name">Second name</label>
+          <input type="text" id="second-name" value="Smith">
+        </div>
+
+        <div class="junto">
+        <div class="input-group">
+          <label for="birth-date">Date of Birth</label>
+          <select id="birth-date">
+            <option>12.05.1992</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="place-birth">Place of Birth</label>
+          <select id="place-birth">
+            <option>New York, USA</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <div class="section">
+          <input type="text" id="itin" value="123-45-678" readonly>
+        <p class="palavras">✓ Your ITIN</p>
+      </div>
+
+    <button type="button"><A href="profile2.html">Go Next →</A></button>
+  </main>
+</body>
+</html>
